@@ -1,4 +1,26 @@
-.box {
-  width: 64px;
-  height: 64px;
+:host {
+  flex-grow: 1;
+  display: flex;
+}
+
+mat-drawer-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+mat-drawer {
+	width: var(--drawer-width);
+}
+
+mat-drawer-content {
+  flex-grow: 1;
+}
+
+.floating-menu-button {
+  position: absolute;
+  top: 16px;
+  left: calc(100% - (40px + 16px));
+  right: 0px;
+  bottom: 0px;
+  z-index: 500;
 }
