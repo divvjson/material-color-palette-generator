@@ -1,0 +1,25 @@
+:host {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+:host ::ng-deep * {
+  font-family: Poppins;
+}
+
+:host ::ng-deep .chrome-picker {
+  width: 100% !important;
+  box-shadow: unset !important;
+}
+
+:host ::ng-deep .saturation {
+  border-radius: 0px !important;
+}
+
+.save-button {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}

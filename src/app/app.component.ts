@@ -1,23 +1,25 @@
-import { AfterViewInit, Component, OnInit, ViewChild, inject } from '@angular/core';
-import { ActivatedRoute, Params, RouterOutlet } from '@angular/router';
-import { ColorPaletteService } from './services/color-palette.service';
+import { AfterViewInit, Component, ViewChild, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ColorPalette } from './interfaces/color-palette.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
 import { DrawerService } from './services/drawer.service';
 import { BreakpointService } from './services/breakpoint.service';
 import { MatIconModule } from '@angular/material/icon';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    ColorPickerComponent,
     CommonModule,
-    RouterOutlet,
     MatButtonModule,
+    MatDividerModule,
     MatIconModule,
     MatSidenavModule,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

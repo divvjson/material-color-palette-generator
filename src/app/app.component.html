@@ -8,7 +8,8 @@
 
 <mat-drawer-container [autosize]="true" [hasBackdrop]="breakpointService.handset$()">
   <mat-drawer #drawer [mode]="breakpointService.handset$() ? 'over' : 'side'" [opened]="!breakpointService.handset$()" [autoFocus]="false">
-    Drawer
+    <app-color-picker />
+    <mat-divider />
   </mat-drawer>
   <mat-drawer-content>
     <button class="floating-menu-button" mat-mini-fab (click)="toggleDrawer()">
