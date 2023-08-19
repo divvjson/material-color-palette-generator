@@ -5,7 +5,7 @@ import { ColorPalette } from '../interfaces/color-palette.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ColorPaletteService {
-  public currentHexColor = signal('#3f51b5');
+  public currentHexColor = signal('#3F51B5');
 
   public currentColorPalette = computed(() => {
     const hex = this.currentHexColor();
