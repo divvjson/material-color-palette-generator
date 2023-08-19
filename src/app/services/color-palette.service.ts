@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import tinycolor from "tinycolor2";
 import { Color } from '../interfaces/color.interface';
 import { ColorPalette } from '../interfaces/color-palette.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ColorPaletteService {
+  public currentHex = signal('#3f51b5');
 
   public generateColorPalette(name: string, hex: string) {
     // Ensure hex starts with a hashtag
