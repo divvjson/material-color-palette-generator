@@ -1,0 +1,11 @@
+:host {
+  flex-grow: 1;
+  display: flex;
+  box-sizing: border-box;
+  padding: 32px;
+}
+
+.color-palette-container {
+  flex-grow: 1;
+  background-color: white;
+}

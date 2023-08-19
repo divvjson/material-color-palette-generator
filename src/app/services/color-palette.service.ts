@@ -5,7 +5,7 @@ import { ColorPalette } from '../interfaces/color-palette.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ColorPaletteService {
-  public currentHex = signal('#3f51b5');
+  public currentHexColor = signal('#3f51b5');
 
   public generateColorPalette(name: string, hex: string) {
     // Ensure hex starts with a hashtag
