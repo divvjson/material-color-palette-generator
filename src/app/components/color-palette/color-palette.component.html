@@ -1,5 +1,5 @@
 <div class="color-palette-container mat-elevation-z6">
-  <div>
-    
+  <div class="color" *ngFor="let color of colorPaletteService.currentColorPalette().colors" [style.backgroundColor]="color.hex" [style.color]="color.contrast">
+    {{ color.name }}
   </div>
 </div>

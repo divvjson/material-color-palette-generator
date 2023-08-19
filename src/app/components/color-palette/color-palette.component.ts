@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ColorPaletteService } from 'src/app/services/color-palette.service';
 
 @Component({
   selector: 'app-color-palette',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./color-palette.component.scss']
 })
 export class ColorPaletteComponent {
-
+  public colorPaletteService = inject(ColorPaletteService);
 }
