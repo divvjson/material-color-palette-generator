@@ -37,20 +37,4 @@ export class AppComponent implements AfterViewInit {
   public toggleDrawer() {
     this.drawerService.drawer?.toggle();
   }
-
-  // route = inject(ActivatedRoute);
-  // colorPaletteService = inject(ColorPaletteService);
-  // currentColorPalette: ColorPalette | null = null;
-
-  // ngOnInit() {
-  //   this.route.queryParams.subscribe(
-  //     (params: Params) => {
-  //       const color = params['color'];
-  //       if (typeof (color) !== 'string') return;
-  //       if (this.colorPaletteService.isValidHexColor(color) === false) return;
-  //       this.currentColorPalette = this.colorPaletteService.generateColorPalette(color, color);
-  //       console.log(this.currentColorPalette);
-  //     }
-  //   );
-  // }
 }
