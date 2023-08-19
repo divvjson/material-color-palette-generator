@@ -17,12 +17,13 @@ mat-drawer {
 
 mat-drawer-content {
   flex-grow: 1;
+  display: flex;
 }
 
 .floating-menu-button {
   position: absolute;
-  top: 16px;
-  left: calc(100% - (40px + 16px));
+  top: 12px;
+  left: calc(100% - (40px + 12px));
   right: 0px;
   bottom: 0px;
   z-index: 500;

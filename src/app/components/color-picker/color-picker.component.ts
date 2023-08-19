@@ -22,7 +22,7 @@ export class ColorPickerComponent {
 
   public handleColorChanged(color: string | RGBA | HSLA | HSVA) {
     if (typeof(color) !== 'string') return;
-    const hex = color;
-    this.colorPaletteService.currentHex.set(hex);
+    const hex = color.toUpperCase();
+    this.colorPaletteService.currentHexColor.set(hex);
   }
 }

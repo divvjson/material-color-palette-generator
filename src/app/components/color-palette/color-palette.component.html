@@ -1,1 +1,11 @@
-<p>color-palette works!</p>
+<div class="color-palette-container mat-elevation-z6">
+  <div 
+    class="color" 
+    matRipple 
+    *ngFor="let color of colorPaletteService.currentColorPalette().colors" 
+    [style.backgroundColor]="color.hex" 
+    [style.color]="color.contrast"
+    (click)="copyToClipboard(color)">
+    {{ color.name }}
+  </div>
+</div>
