@@ -8,11 +8,13 @@ import { BreakpointService } from './services/breakpoint.service';
 import { MatIconModule } from '@angular/material/icon';
 import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ColorPaletteListComponent } from './components/color-palette-list/color-palette-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    ColorPaletteListComponent,
     ColorPickerComponent,
     CommonModule,
     MatButtonModule,

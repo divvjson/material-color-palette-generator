@@ -1,2 +1,2 @@
 <color-chrome [color]="colorPaletteService.currentHexColor()" (colorChange)="handleColorChanged($event)" />
-<button mat-flat-button class="save-button" color="accent">SAVE</button>
+<button mat-flat-button class="save-button" color="accent" (click)="save()" [disabled]="!canSave()">SAVE</button>
