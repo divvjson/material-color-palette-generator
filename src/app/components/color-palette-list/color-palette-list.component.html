@@ -2,4 +2,4 @@
   *ngFor="let hexColor of colorPaletteService.savedHexColors()"
   [hexColor]="hexColor"
   matRipple
-  (mousedown)="load(hexColor)" />
+  (mouseup)="load(hexColor)" />
