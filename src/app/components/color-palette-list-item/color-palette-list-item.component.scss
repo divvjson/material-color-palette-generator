@@ -1,0 +1,30 @@
+:host {
+  min-height: 128px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.delete-button {
+  position: absolute;
+  top: 4px;
+  left: calc(100% - 48px - 4px);
+  color: white;
+}
+
+.color {
+  flex-grow: 1;
+}
+
+.name {
+  width: 70px;
+  height: 29px;
+  position: absolute;
+  top: calc(100% - 29px - 8px);
+  left: calc(50% - calc(70px / 2));
+  background-color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 4px;
+}

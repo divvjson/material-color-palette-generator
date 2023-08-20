@@ -1,0 +1,5 @@
+<app-color-palette-list-item 
+  *ngFor="let hexColor of colorPaletteService.savedHexColors()"
+  [hexColor]="hexColor"
+  matRipple
+  (mouseup)="load(hexColor)" />

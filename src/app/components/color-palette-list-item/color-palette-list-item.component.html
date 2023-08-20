@@ -1,0 +1,7 @@
+<button class="delete-button" mat-icon-button (click)="delete($event)">
+  <mat-icon>close</mat-icon>
+</button>
+<div class="color" *ngFor="let color of colorPaletteService.generateColorPalette(hexColor).colors" [style.backgroundColor]="color.hex"></div>
+<div class="name">
+  {{ hexColor }}
+</div>

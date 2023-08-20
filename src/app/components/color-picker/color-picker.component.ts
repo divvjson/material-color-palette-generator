@@ -25,4 +25,12 @@ export class ColorPickerComponent {
     const hex = color.toUpperCase();
     this.colorPaletteService.currentHexColor.set(hex);
   }
+
+  public save() {
+    this.colorPaletteService.savedHexColors.mutate((value) => value.push(this.colorPaletteService.currentHexColor()));
+  }
+
+  public canSave() {
+    return !this.colorPaletteService.savedHexColors().includes(this.colorPaletteService.currentHexColor());
+  }
 }
