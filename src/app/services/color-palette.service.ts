@@ -19,10 +19,9 @@ export class ColorPaletteService {
   );
 
   public currentHexColor = signal('#3F51B5');
+  public currentColorPalette = computed(() => this.generateColorPalette(this.currentHexColor()));
 
-  public currentColorPalette = computed(() => {
-    const hex = this.currentHexColor();
-
+  public generateColorPalette(hex: string) {
     const colors: Color[] = [
       { hex: tinycolor(hex).lighten(37.7).saturate(10.4).spin(-13).toHexString().toUpperCase(), name: '50' },
       { hex: tinycolor(hex).lighten(31.8).saturate(10.4).spin(-9.5).toHexString().toUpperCase(), name: '100' },
@@ -50,7 +49,7 @@ export class ColorPaletteService {
     };
 
     return colorPalette;
-  });
+  }
 
   private getContrastColor(hex: string): '#000' | '#FFF' {
     const [r, g, b] = this.hexToRgb(hex);

@@ -1,3 +1,5 @@
-<div *ngFor="let hexColor of colorPaletteService.savedHexColors()">
-  <app-color-palette-list-item [hexColor]="hexColor" />
-</div>
+<app-color-palette-list-item 
+  *ngFor="let hexColor of colorPaletteService.savedHexColors()"
+  [hexColor]="hexColor"
+  matRipple
+  (mousedown)="load(hexColor)" />
