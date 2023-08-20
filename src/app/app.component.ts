@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { ColorPaletteListComponent } from './components/color-palette-list/color-palette-list.component';
+import { InfoComponent } from './components/info/info.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { ColorPaletteListComponent } from './components/color-palette-list/color
     ColorPaletteListComponent,
     ColorPickerComponent,
     CommonModule,
+    InfoComponent,
     MatButtonModule,
     MatDividerModule,
     MatIconModule,

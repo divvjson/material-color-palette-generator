@@ -15,6 +15,11 @@ mat-drawer {
   flex-direction: column;
 }
 
+:host ::ng-deep .mat-drawer-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
 mat-drawer-content {
   flex-grow: 1;
   display: flex;

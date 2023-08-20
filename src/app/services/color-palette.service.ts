@@ -1,10 +1,23 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, effect, signal } from '@angular/core';
 import tinycolor from "tinycolor2";
 import { Color } from '../interfaces/color.interface';
 import { ColorPalette } from '../interfaces/color-palette.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ColorPaletteService {
+
+  constructor() {
+    effect(() => {
+      localStorage.setItem('savedHexColors', JSON.stringify(this.savedHexColors()));
+    });
+  }
+
+  public savedHexColors = signal<string[]>(
+    localStorage.getItem('savedHexColors') !== null ?
+      JSON.parse(localStorage.getItem('savedHexColors')!) as string[] :
+      []
+  );
+
   public currentHexColor = signal('#3F51B5');
 
   public currentColorPalette = computed(() => {

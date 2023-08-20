@@ -27,12 +27,10 @@ export class ColorPickerComponent {
   }
 
   public save() {
-    const hex = this.colorPaletteService.currentHexColor();
-    localStorage.setItem(hex, hex);
+    this.colorPaletteService.savedHexColors.mutate((value) => value.push(this.colorPaletteService.currentHexColor()));
   }
 
   public canSave() {
-    const hex = this.colorPaletteService.currentHexColor();
-    return !localStorage.getItem(hex);
+    return !this.colorPaletteService.savedHexColors().includes(this.colorPaletteService.currentHexColor());
   }
 }

@@ -1,1 +1,3 @@
-<p>color-palette-list works!</p>
+<div *ngFor="let hexColor of colorPaletteService.savedHexColors()">
+  <app-color-palette-list-item [hexColor]="hexColor" />
+</div>
